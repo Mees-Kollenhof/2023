@@ -1,4 +1,4 @@
-var xJOS = 225;
+var xJOS = 75;
 var yJOS = 75;
 
 function setup() {
@@ -36,4 +36,10 @@ function tekenJos(x,y) {
   fill('white');
   arc(0, 13, 26, 13, 0, PI, CHORD);
   pop();
+
+  translate(0,160);
+ tekenJos(xJOS,yJOS);
+ translate(0,160);
+ tekenJos(xJOS,yJOS);
+
 }

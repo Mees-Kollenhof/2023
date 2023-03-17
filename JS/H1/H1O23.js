@@ -20,17 +20,28 @@ function draw() {
     y += 5;
   }
 
+  if (keyIsDown(LEFT_ARROW)) {
+    x -= 5;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    x += 5;
+  }
   y = constrain(y,0,height - 100);
+  x = constrain(x,0,width - 100);
 
-  if (y >= 75 && y <= 225) {
+  if (x >= 700 && x <= 875 && y >= 75 && y <= 225) {
     fill('chartreuse');
   }
   else {
     fill('darkkhaki');
   }
-  
+
+  {
   rect(800,175,75,50);
   
   fill('moccasin');
-  rect(x,y,100,100);   
+  rect(x,y,100,100);}
 }
+
+//gebleven bij opdr. 133//
+//pagina 17

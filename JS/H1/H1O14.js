@@ -1,5 +1,5 @@
-var xJOS = 225;
-var yJOS = 375;
+var xJOS = 75;
+var yJOS = 75;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -7,39 +7,39 @@ function setup() {
   textFont("Verdana");
   textSize(14);
   frameRate(20);
+  fill('black');
 }
 
 function draw() {
   background('lavender');
-  fill('black');
-  // yJOS--;
+  xJOS = constrain(xJOS,0,width - 25);
+  text("x = " + round(xJOS),10,20);
+  tekenJos(xJOS,yJOS);
+  translate(0,160);
+  tekenJos(xJOS,yJOS);
+  translate(0,160);
+  tekenJos(xJOS,yJOS);  
+  xJOS += 3;  
+}
 
-  xJOS=constrain(xJOS,75,width-75);
-  yJOS=constrain(yJOS,75,height-75);
-  text("x = " + round(xJOS) + " y = " + yJOS,10,20);
-  
-  translate(xJOS,yJOS);
-
-  // in de volgende regels wordt JOS getekend
-
+function tekenJos(x,y) {
   push();
-  scale(1);  
+  translate(x,y);
+  scale(1); 
   noStroke();
   fill('indianred');
-  ellipse(0,0,150);
+  ellipse(0,0,50);
   fill('slategray');
-  ellipse(-20,-30,50);
-  ellipse(20,-30,50);
+  ellipse(-7,-10,17);
+  ellipse(7,-10,17);
   fill('white');
-  ellipse(-20,-25,20,40);
-  ellipse(20,-25,20,40);
+  ellipse(-7,-8,7,13);
+  ellipse(7,-8,7,13);
   fill('orange');
-  ellipse(0,10,50);
+  ellipse(0,3,17);
   stroke('slategray');
-  strokeWeight(10);
+  strokeWeight(3);
   fill('white');
-  arc(0, 40, 80, 40, 0, PI, CHORD);
+  arc(0, 13, 26, 13, 0, PI, CHORD);
   pop();
-  // einde tekenen JOS
-
 }

@@ -52,4 +52,20 @@ function tekenJos(x,y,kleur) {
   fill('white');
   arc(0, 13, 26, 13, 0, PI, CHORD);
   pop();
-}
+}                                                                                      
+// DDDDDDDDDDDDD             OOOOOOOOO          OOOOOOOOO     MMMMMMMM               MMMMMMMM
+// D::::::::::::DDD        OO:::::::::OO      OO:::::::::OO   M:::::::M             M:::::::M
+// D:::::::::::::::DD    OO:::::::::::::OO  OO:::::::::::::OO M::::::::M           M::::::::M
+// DDD:::::DDDDD:::::D  O:::::::OOO:::::::OO:::::::OOO:::::::OM:::::::::M         M:::::::::M
+//   D:::::D    D:::::D O::::::O   O::::::OO::::::O   O::::::OM::::::::::M       M::::::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM:::::::::::M     M:::::::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM:::::::M::::M   M::::M:::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM::::::M M::::M M::::M M::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM::::::M  M::::M::::M  M::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM::::::M   M:::::::M   M::::::M
+//   D:::::D     D:::::DO:::::O     O:::::OO:::::O     O:::::OM::::::M    M:::::M    M::::::M
+//   D:::::D    D:::::D O::::::O   O::::::OO::::::O   O::::::OM::::::M     MMMMM     M::::::M
+// DDD:::::DDDDD:::::D  O:::::::OOO:::::::OO:::::::OOO:::::::OM::::::M               M::::::M
+// D:::::::::::::::DD    OO:::::::::::::OO  OO:::::::::::::OO M::::::M               M::::::M
+// D::::::::::::DDD        OO:::::::::OO      OO:::::::::OO   M::::::M               M::::::M
+// DDDDDDDDDDDDD             OOOOOOOOO          OOOOOOOOO     MMMMMMMM               MMMMMMMM

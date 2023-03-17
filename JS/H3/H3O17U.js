@@ -99,7 +99,7 @@ class Racer {
   beginScherm() {
     push();
     fill(0);
-    text("Dit is een simpel Race-spel. Bestuur je auto met het touchscreen.\n\nBegin het spel door het scherm aan te raken.",0,0,canvas.width,canvas.height)
+    text("Glibberige trip puzzel",0,0,canvas.width,canvas.height)
     pop();
   }
 
@@ -145,21 +145,23 @@ class Racer {
 
 
 var rooster = [];
-var patroon = [1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-               1,1,0,1,1,1,0,0,0,0,1,1,1,0,
-               1,1,1,1,0,1,0,1,1,1,1,0,1,0,
-               0,0,0,0,0,1,0,1,1,0,0,1,1,0,
-               0,1,1,1,0,1,0,1,1,0,0,1,0,0,
-               0,1,0,1,1,1,0,1,1,1,0,1,0,0,
-               0,1,0,0,0,0,0,0,0,1,0,1,1,1,
-               0,1,1,1,1,1,1,1,1,1,0,1,1,0];
+var patroon = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+               1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+               0,0,0,0,0,0,1,1,1,1,0,0,0,0,0];
 
-var grootte = 50;
+var grootte = 100;
 
 function setup() {
   // initialisatie
 
-  canvas = createCanvas(700,400);
+  canvas = createCanvas(1500,1300);
   canvas.parent('processing');
   textFont("Monospace");
   textSize(20);

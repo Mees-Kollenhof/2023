@@ -1,5 +1,7 @@
-var horizontaalA = 120;
-var verticaal = 170;
+var horizontaalA = 1;
+var verticaalA =  170;
+var horizontaalB = 100;
+var verticaalB =  170;
 
 function setup() {
   canvas = createCanvas(1000,300);
@@ -8,7 +10,7 @@ function setup() {
   textSize(30);
   stroke('white');
   strokeWeight(10);
-  frameRate(10);
+  frameRate(100);
 }
 
 function draw() {
@@ -16,8 +18,14 @@ function draw() {
   fill('white');
   rect(0,0,width,40);
   fill('black');  
-  text("Het middelpunt van de cirkel bevindt zich in [x,y] = [" + horizontaalA + "," + verticaal + "]",10,30);
+  text("Het middelpunt van de cirkel bevindt zich in [x,y] = [" + horizontaalA + "," + verticaalA + "]",10,30);
   fill('dodgerblue');
-  ellipse(horizontaalA,verticaal,200);
-  horizontaalA += 2;
+  ellipse(horizontaalA,verticaalA,200);
+  horizontaalA += 10;
+  fill('darkred');
+  ellipse(horizontaalB,verticaalB,120);
+  horizontaalB += 1;
+  if (horizontaalA > 900) {
+    horizontaalA = 120;
+  }
 }

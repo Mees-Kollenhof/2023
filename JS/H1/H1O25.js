@@ -30,7 +30,7 @@ function draw() {
   
   // Pas onderstaande regel aan: gebruik de functie dist om de onderlinge afstand te bepalen
   
-  onderlingeAfstand = 1;
+  onderlingeAfstand = 2;
   if (onderlingeAfstand <= 0) {
     eindScherm();
     noLoop();
