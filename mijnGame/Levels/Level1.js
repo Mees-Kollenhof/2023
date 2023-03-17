@@ -1,7 +1,7 @@
 function setup() {
 	bg = loadImage('water.JPG');
 	canvas = createCanvas(1200, 900);
-	frameRate(20);
+	frameRate(60);
 }
 
 /*
