@@ -7,6 +7,7 @@ function setup() {
 	bg = loadImage('water.png');
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
+	song.play();
 }
 
 function draw() {
@@ -16,10 +17,6 @@ function draw() {
 	speler.teken();
   	fill('green');
 }
-
-function music() {
-	  song.play();
-	 }
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
