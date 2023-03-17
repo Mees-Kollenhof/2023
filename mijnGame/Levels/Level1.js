@@ -21,6 +21,8 @@ function draw() {
 }
 
 function keyPressed () {
+	song.play();
+
 	if (keyCode === RIGHT_ARROW) {
 		speler.beweeg(1, 0);
 		beweegboten();
