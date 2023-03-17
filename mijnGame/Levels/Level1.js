@@ -2,8 +2,11 @@ speler = new Sprite(225, 825, 50, 50, 'white', false);
 
 let song;
 
-function setup() {
+function preload() {
 	song = loadSound('test.mp3');
+}
+
+function setup() {
 	bg = loadImage('water.png');
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
