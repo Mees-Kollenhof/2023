@@ -1,3 +1,5 @@
+const 
+
 class Sprite {
     x;
 	y;
