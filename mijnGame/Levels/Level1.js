@@ -1,7 +1,10 @@
 speler = new Sprite(225, 825, 50, 50, 'white', false);
 
+let song;
+
 function setup() {
-	bg = loadImage('water.JPG');
+	song = loadSound('test.mp3');
+	bg = loadImage('water.png');
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
 }
@@ -13,6 +16,10 @@ function draw() {
 	speler.teken();
   	fill('green');
 }
+
+function music() {
+	  song.play();
+	 }
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
