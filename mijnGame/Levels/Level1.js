@@ -3,7 +3,7 @@ speler = new Sprite(225, 825, 50, 50, 'white', false);
 let song;
 
 function preload() {
-	song = loadSound('test.mp3');
+	song = loadSound('PuzzelMuziek.mp3');
 }
 
 function setup() {
