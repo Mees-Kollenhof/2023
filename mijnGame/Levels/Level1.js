@@ -10,6 +10,7 @@ function setup() {
 	bg = loadImage('water.png');
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
+	song.play();
 }
 
 function draw() {
@@ -21,8 +22,6 @@ function draw() {
 }
 
 function keyPressed () {
-	song.play();
-
 	if (keyCode === RIGHT_ARROW) {
 		speler.beweeg(1, 0);
 		beweegboten();
