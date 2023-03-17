@@ -1,4 +1,5 @@
 function setup() {
+	bg = loadImage('water.JPG');
 	canvas = createCanvas(1200, 900);
 	frameRate(20);
 }
@@ -133,11 +134,11 @@ function beweegboten() {
 
 function draw() {
 	clear();
-  background('blue');
+  background(bg);
   tekenboten();
   fill('green');
-  rect(200,800,100,100);
-  rect(900,0,100,100);
+  rect(200,800,50,50);
+  rect(900,0,50,50);
 }
   
 
