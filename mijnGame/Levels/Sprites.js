@@ -15,6 +15,8 @@ class Sprite {
         this.wraparound = wraparound;
 	}
 
+    function 
+
 	teken() {
 		push();
 		fill(this.kleur);

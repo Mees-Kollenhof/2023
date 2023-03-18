@@ -1,9 +1,24 @@
 speler = new Sprite(225, 825, 50, 50, 'white', false);
 
 let song;
+let pic1
+let pic2
+let pic3
+let pic4
+let dock1
+let dock2
+
 
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
+	pic1 = loadImage("Left.png")
+	pic2 = loadImage("Right.png")
+	pic3 = loadImage("Up.png")
+	pic4 = loadImage("Down.png")
+	dock1 = loadImage("Dock1.png")
+	dock2 = loadImage("Dock2.png")
+	animatie.push(frame);
+
 }
 
 function setup() {
@@ -34,3 +49,4 @@ function keyPressed () {
     	speler.beweeg(0, 1);
   	}
 }
+
