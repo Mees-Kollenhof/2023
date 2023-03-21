@@ -15,7 +15,6 @@ class Sprite {
         this.wraparound = wraparound;
 	}
 
-    //function 
 
 	teken() {
 		push();
