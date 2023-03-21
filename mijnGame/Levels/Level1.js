@@ -19,7 +19,7 @@ function preload() {
 //	dock1 = loadImage("Dock1.png");
 //	dock2 = loadImage("Dock2.png");
 	dock2 = loadImage("spritesheet.png");
-	animatie.push(frame);
+//	animatie.push(frame);
 
 }
 
