@@ -1,4 +1,7 @@
-speler = new Sprite(225, 825, 50, 50, 'white', false);
+var animatie = [];
+var aantalplaatjes = 4;
+var nummer = 1;
+
 
 let song;
 let pic1;
@@ -12,11 +15,16 @@ let spritesheet;
 
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
-	dock2 = loadImage("spritesheet.png");
+	bg = loadImage('Backgrounds/water.png');
+	for (var a = 0;b < aantalplaatjes;a++) {
+		frame = loadImage("MijnGame/Plaatjes/speler_" + a + ".png");
+		animatie.push(frame);
+}
 }
 
 function setup() {
-	bg = loadImage('water.png');
+	
+	speler = new Sprite(225, 825, 50, 50, 'white', false, animatie);
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
 	song.play();
