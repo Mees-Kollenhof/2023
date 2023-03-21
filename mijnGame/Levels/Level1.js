@@ -12,15 +12,7 @@ let spritesheet;
 
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
-//	pic1 = loadImage("Left.png");
-//	pic2 = loadImage("Right.png");
-//	pic3 = loadImage("Up.png");
-//	pic4 = loadImage("Down.png");
-//	dock1 = loadImage("Dock1.png");
-//	dock2 = loadImage("Dock2.png");
 	dock2 = loadImage("spritesheet.png");
-//	animatie.push(frame);
-
 }
 
 function setup() {
