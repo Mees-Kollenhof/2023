@@ -58,7 +58,7 @@ function keyPressed () {
 		nummer = 2;
   	}
 
-	//image(animatie[nummer]);
+	image(animatie[nummer]);
 
 	}
 
