@@ -24,7 +24,7 @@ function preload() {
 
 function setup() {
 	
-	speler = new Sprite(225, 825, 50, 50, 'white', false, animatie);
+	speler = new Sprite(225, 825, 100, 100, 'white', false, animatie);
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
 	song.play();
@@ -58,7 +58,7 @@ function keyPressed () {
 		nummer = 2;
   	}
 
-	image(animatie[nummer]);
+	//image(animatie[nummer]);
 
 	}
 
