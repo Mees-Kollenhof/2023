@@ -1,6 +1,6 @@
 var animatie = [];
 var aantalplaatjes = 4;
-var nummer = 1;
+var nummer = 4;
 
 
 let song;
@@ -16,8 +16,8 @@ let spritesheet;
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
-	for (var a = 0;b < aantalplaatjes;a++) {
-		frame = loadImage("MijnGame/Plaatjes/speler_" + a + ".png");
+	for (var b = 0;b < aantalplaatjes;b++) {
+		frame = loadImage("Plaatjes/speler" + b + ".png");
 		animatie.push(frame);
 }
 }
@@ -41,14 +41,21 @@ function draw() {
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
 		speler.beweeg(1, 0);
+		nummer = 4;		
 		beweegboten();
+
 	} else if (keyCode === LEFT_ARROW) {
 		speler.beweeg(-1, 0);
-    	beweegboten();
+    	nummer = 3;
+		beweegboten();
+		
   	} else if (keyCode === UP_ARROW) {
 		speler.beweeg(0, -1);
+		nummer = 1;
+		
 	} else if (keyCode === DOWN_ARROW) {
     	speler.beweeg(0, 1);
+		nummer = 2;
   	}
 }
 
