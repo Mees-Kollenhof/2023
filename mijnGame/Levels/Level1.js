@@ -4,7 +4,7 @@ var nummer = 4;
 var frame;
 
 
-let song;
+
 let speler1;
 let speler2;
 let speler3;

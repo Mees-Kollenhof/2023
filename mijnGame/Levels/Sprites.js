@@ -5,7 +5,7 @@ class Sprite {
 	breedte;
 	kleur;
     wraparound;
-    //plaatje;
+    animatie;
 
 	constructor(x, y, lengte, breedte, kleur, wraparound, pl) {
 		this.x = x;
@@ -14,14 +14,14 @@ class Sprite {
 		this.breedte = breedte;
 		this.kleur = kleur;
         this.wraparound = wraparound;
-       // this.plaatje = pl;
+        this.animatie;
 	}
 
 
 	teken() {
 		push();
 		fill(this.kleur);
-		// rect(this.x, this.y, this.lengte, this.breedte);
+		//rect(this.x, this.y, this.lengte, this.breedte);
         //image(,this.x, this.y);
 		pop();
 	}
