@@ -1,11 +1,10 @@
 var animatie = [];
-var aantalplaatjes = 5;
-var nummer = 5;
+var aantalplaatjes = 4;
+var nummer = 4;
 var frame;
 
 
 let song;
-let speler0;
 let speler1;
 let speler2;
 let speler3;
