@@ -16,7 +16,7 @@ let speler4;
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
-	for (var b = 0;b < aantalplaatjes;b++) {
+	for (var b = 1;b < aantalplaatjes;b++) {
 		frame = loadImage("Plaatjes/speler" + b + ".png");
 		animatie.push(frame);
 	}
@@ -58,7 +58,7 @@ function keyPressed () {
 		nummer = 2;
   	}
 
-	image(animatie[nummer]);
+	//image(animatie[nummer]);
 
 	}
 
