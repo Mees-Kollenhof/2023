@@ -1,16 +1,17 @@
 var animatie = [];
-var aantalplaatjes = 4;
-var nummer = 4;
+var aantalplaatjes = 5;
+var nummer = 5;
+var frame;
 
 
 let song;
-let pic1;
-let pic2;
-let pic3;
-let pic4;
-let dock1;
-let dock2;
-let spritesheet;
+let speler0;
+let speler1;
+let speler2;
+let speler3;
+let speler4;
+//let dock1;
+//let dock2;
 
 
 function preload() {
@@ -19,7 +20,7 @@ function preload() {
 	for (var b = 0;b < aantalplaatjes;b++) {
 		frame = loadImage("Plaatjes/speler" + b + ".png");
 		animatie.push(frame);
-}
+	}
 }
 
 function setup() {
@@ -52,10 +53,13 @@ function keyPressed () {
   	} else if (keyCode === UP_ARROW) {
 		speler.beweeg(0, -1);
 		nummer = 1;
-		
+
 	} else if (keyCode === DOWN_ARROW) {
     	speler.beweeg(0, 1);
 		nummer = 2;
   	}
-}
+
+	image(animatie[nummer]);
+
+	}
 
