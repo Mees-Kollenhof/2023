@@ -1,28 +1,52 @@
+//var animatie: []
+//var aantalplaatjes: 4
+//var plaatjesnummer: 0
+
+//Het lukte mij helaas niet om de animatie voor de speler te laten werken
+//daarom zijn de variabelen gecomment zodat de pagina wel werkt
+
 let song;
 let bg;
+//dit zijn twee variabele types voor de achtergrondmuziek en de achtergrond
 
 function preload() {
-	//song = loadSound('PuzzelMuziek.mp3');
+	song = loadSound('PuzzelMuziek.mp3');
+	//Dit is mijn zelfgekozen muziek. een mix van verschillende nummers
 	bg = loadImage('Backgrounds/water.png');
-	for (var b = 0;b < aantalplaatjes;b++) {
-		frame = loadImage("Plaatjes/speler" + b + ".png");
+	img1 = loadImage('dock1.png');
+	img = loadImage('dock2.png');
+	//Dock 1 en 2 zijn zelf gemaakt
+
+		//for (var b = 0;b < aantalplaatjes;b++) {
+		//frame = loadImage("Plaatjes/speler" + b + ".png");
+		//speler.animatie.push(frame);
+		//}
+
+		//dit werkte helaas niet, daarom moest ik het commenten zodat de pagina wel kon werken
 }
-}
+
 
 
 function setup() {
 	canvas = createCanvas(1200, 900);
+	//dit is mijn gekozen grootte
 	frameRate(60);
-	//song.play();
+	song.play();
 }
 
 class Sprite {
+	//hier staat alle informatie in voor een sprite om getekend te worden
     x;
+	//horizontaal
 	y;
+	//verticaal
 	lengte;
 	breedte
 	kleur;
     wraparound;
+	//als iets van het scherm af gaat, dan komt het dankzij de wraparound functie aan de andere kant weer terecht
+	//wraparound heeft geen invloed op de speler want anders zou het te makkelijk gaan
+	
 
 	constructor(x, y, lengte, breedte, kleur, wraparound) {
 		this.x = x;
@@ -36,6 +60,7 @@ class Sprite {
 	beweeg(x, y) {
 		const stapX = x * 100;
 		const stapY = y * 100;
+		//hoe groot moet een stap zijn
 	
 		if(this.wraparound === true) {
 			if(this.x + stapX <= 1100 && stapX > 0) {
@@ -71,7 +96,8 @@ class Sprite {
 	}
 }
 
-speler = new Sprite(225, 725, 50, 50, 'red', false);
+speler = new Sprite(225, 825, 50, 50, 'red', false);
+//de speler zelf
 
 boot1 = new Sprite(200,700,100,100, 'red', true);
 boot2 = new Sprite(700,700,100,100, 'red', true);
@@ -91,6 +117,7 @@ boot15 = new Sprite(400,200,100,100, 'red', true);
 boot16 = new Sprite(900,200,100,100, 'red', true);
 boot17 = new Sprite(500,100,100,100, 'lightblue', true);
 boot18 = new Sprite(900,100,100,100, 'lightblue', true);
+//en alle boten
 	
 function tekenboten() {
 	boot1.teken();
@@ -111,10 +138,26 @@ function tekenboten() {
 	boot16.teken();
 	boot17.teken();
 	boot18.teken();
+	//hier kan je alle boten tekenen
 }
+
 
 function tekenspeler() {
 	speler.teken();
+	//speler.toon();
+	//hier kan de speler getekend worden
+}
+
+function tekendock1 () {
+	image(img,900,0,100,100);
+	noFill();
+	//hier kan de dock getekend worden
+}
+
+function tekendock2 () {
+	image(img1,200,800,100,100);
+	noFill();
+	//hier kan de tweede dock getekend worden
 }
 	
 function beweegboten() {
@@ -136,25 +179,51 @@ function beweegboten() {
 	boot16.beweeg(-4, 0);
 	boot17.beweeg(3, 0);
 	boot18.beweeg(3, 0);
+	//dit zijn de snelheden van alle boten
 }
 
 function draw() {
 	clear();
-	background(bg);
+	background(bg);	
+	tekendock1();
+	tekendock2();
 	tekenboten();
 	tekenspeler();
+	//hier word alles daadwerkelijk getekend
 }
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
 		speler.beweeg(1, 0);
+		//this.plaatjesnummer = 4;
 		beweegboten();
 	} else if (keyCode === LEFT_ARROW) {
 		speler.beweeg(-1, 0);
+		//this.plaatjesnummer = 3;
 		beweegboten();
   	} else if (keyCode === UP_ARROW) {
 		speler.beweeg(0, -1);
+		//this.plaatjesnummer = 1;
 	} else if (keyCode === DOWN_ARROW) {
     	speler.beweeg(0, 1);
+		//this.plaatjesnummer = 2;
+
+//de snelheden bij de bijbehorende gekozen toetsen
+
   	}
+	  //toon() {
+	  //plaatjes(this.animatie[this.plaatjesnummer],this.x,this.y);
+	  //}
 }
+
+/* 
+Dingen die ik graag nog had willen toevoegen maar waar ik geen tijd voor had
+
+-Speler animatie, de sprites staan in de plaatjes map en er is al gecommente code maar ik had te weinig tijd om het te laten werken.
+-Water = af, als je het water aanraakt dan ga je terug naar het begin
+-Boten, dat de boten je meenamen in plaats van dat ze zonder jou ervandoor gaan en jou in het water achterlaten
+
+Ik vond dit een flinke uitdaging maar ik ben tevreden met het werk dat ik heb
+ik  hoop hiermee een 6,5 te halen om een compensatiepunt voor het examen te blijven
+Ik heb erg veel met codes zitten werken maar ik kon ook creatief zijn met het maken van pixelart
+*/
