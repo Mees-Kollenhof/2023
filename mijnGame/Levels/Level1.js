@@ -23,16 +23,6 @@ function setup() {
 }
 
 
-class Sprite () {
-    x;
-	y;
-	plaatje;
-	lengte;
-	breedte;
-	kleur;
-    wraparound;
-}
-
 
 
 class player {
@@ -88,7 +78,15 @@ class player {
 	}
 }
 
-  
+class Sprite () {
+    x;
+	y;
+	lengte;
+	breedte
+	plaatje;
+	kleur;
+    wraparound;
+}
  
 
 	boot1 = new Sprite(200,700,100,100, 'red', true);
