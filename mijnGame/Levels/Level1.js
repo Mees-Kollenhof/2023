@@ -23,7 +23,7 @@ function setup() {
 }
 
 
-class Sprite {
+class Sprite () {
     x;
 	y;
 	plaatje;
