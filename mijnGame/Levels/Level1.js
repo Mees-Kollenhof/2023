@@ -3,8 +3,7 @@ var aantalplaatjes = 4;
 var nummer = 2;
 var frame;
 
-let Sprite
-let speler1;
+
 
 
 
@@ -17,6 +16,11 @@ function preload() {
 	}
 }
 
+function setup() {
+	canvas = createCanvas(1200, 900);
+	frameRate(60);
+	song.play();
+}
 
 
 class Sprite {
@@ -27,25 +31,25 @@ class Sprite {
 	breedte;
 	kleur;
     wraparound;
-    plaatje;
-
 }
 
 
 
-class speler1 {
+class player {
    constructor(pl) {
 		this.x = x;
 	    this.y = y;
-	    this.plaatje = pl;	
 		this.lengte = lengte;
 		this.breedte = breedte;
+		this.plaatje = pl;
 		this.kleur = kleur;
 		this.wraparound = wraparound;
     }
 	teken() {
-	    push();
-	    Image(this.plaatje[2],this.x, this.y);
+		clear(); 
+		push();
+		background(bg);
+	    player = new Sprite(225, 825, 100, 100, plaatje, 'white', false);
 	    pop()
     }
   }
@@ -63,14 +67,7 @@ class speler1 {
   
 
 
-  function setup() {
-	
-	speler1 = new Sprite(225, 825, 100, 100, 'white', false);
-	canvas = createCanvas(1200, 900);
-	frameRate(60);
-	song.play();
-}
-
+  
  
 
 	boot1 = new Sprite(200,700,100,100, 'red', true);
@@ -144,10 +141,7 @@ class speler1 {
 	//}
 
 function draw() {
-	clear();
-  	background(bg);
   	tekenboten();
-	speler.teken();
   	//fill('green');
 }
 
@@ -171,8 +165,8 @@ function keyPressed () {
 		nummer = 2;
   	}
 
-eweeg(x, y) {
-	const stapX = x * 10b0;
+beweeg(x, y) {
+	const stapX = x * 100;
 	const stapY = y * 100;
 
 	if(this.wraparound === true) {
@@ -200,6 +194,6 @@ eweeg(x, y) {
 		this.y += stapY;
 	}
 }
-	//image(animatie[nummer]);
+	image(animatie[nummer]);
 
 	}
