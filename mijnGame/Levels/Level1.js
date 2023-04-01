@@ -46,10 +46,9 @@ class Sprite {
 	lengte;
 	breedte
 	plaatje;
-	kleur;
     wraparound;
 
-	constructor() {
+	constructor(x, y, lengte, breedte, plaatje) {
 
 	}
 
