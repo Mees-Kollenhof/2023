@@ -3,6 +3,7 @@ function preload() {
 	background = loadImage('Backgrounds/water.png');
 }
 
+
 function setup() {
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
@@ -15,16 +16,14 @@ class Sprite {
 	lengte;
 	breedte
 	kleur;
-	plaatje;
     wraparound;
 
-	constructor(x, y, lengte, breedte, kleur = color(0, 0, 0), plaatje, wraparound) {
+	constructor(x, y, lengte, breedte, kleur, wraparound) {
 		this.x = x;
 		this.y = y
 		this.lengte = lengte;
 		this.breedte = breedte;
 		this.kleur = kleur;
-		this.plaatje = plaatje
 		this.wraparound = wraparound;
 	}
 
@@ -130,24 +129,21 @@ function beweegboten() {
 }
 
 function draw() {
-	tekenboten();
 	clear();
+	background(background);
+	tekenboten();
 }
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
 		speler.beweeg(1, 0);
-		nummer = 4;		
 		beweegboten();
 	} else if (keyCode === LEFT_ARROW) {
 		speler.beweeg(-1, 0);
-    	nummer = 3;
 		beweegboten();
   	} else if (keyCode === UP_ARROW) {
 		speler.beweeg(0, -1);
-		nummer = 1;
 	} else if (keyCode === DOWN_ARROW) {
     	speler.beweeg(0, 1);
-		nummer = 2;
   	}
 }
