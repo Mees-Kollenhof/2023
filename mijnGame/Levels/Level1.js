@@ -99,13 +99,13 @@ boot16 = new Sprite(900,200,100,100, 'red', true);
 boot17 = new Sprite(500,100,100,100, 'lightblue', true);
 boot18 = new Sprite(900,100,100,100, 'lightblue', true);
 	
-	function tekenboten() {
-		boot1.teken();
-		boot2.teken();
-		boot3.teken();
-		boot4.teken();
-		boot5.teken();
-		boot6.teken();
+function tekenboten() {
+	boot1.teken();
+	boot2.teken();
+	boot3.teken();
+	boot4.teken();
+	boot5.teken();
+	boot6.teken();
 		boot7.teken();
 		boot8.teken();
 		boot9.teken();
