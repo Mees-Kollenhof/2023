@@ -1,16 +1,6 @@
-var animatie = [];
-const aantalplaatjes = 4;
-var nummer = 2;
-var frame;
-
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
-
-	for (var b = 0; b < aantalplaatjes; b++) {
-		frame = loadImage("Plaatjes/speler" + b + ".png");
-		animatie.push(frame);
-	}
 }
 
 function setup() {
@@ -75,7 +65,9 @@ class Sprite {
 		pop();
 	}
 }
- 
+
+speler = new Sprite(225, 725, 50, 50, 'red', false);
+
 boot1 = new Sprite(200,700,100,100, 'red', true);
 boot2 = new Sprite(700,700,100,100, 'red', true);
 boot3 = new Sprite(400,600,100,100, 'lightblue', true);
@@ -135,6 +127,12 @@ function beweegboten() {
 	boot16.beweeg(-4, 0);
 	boot17.beweeg(3, 0);
 	boot18.beweeg(3, 0);
+}
+
+function draw() {
+	tekenboten();
+	background();
+	clear();
 }
 
 function keyPressed () {
