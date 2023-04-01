@@ -4,8 +4,7 @@ function setup() {
 	noLoop();
 }
 
-function draw () {
-	function draw() {   
+function draw () { 
 		noStroke();   
 		fill('green');   
 		ellipse(300,200,400);   
@@ -14,4 +13,3 @@ function draw () {
 		   strokeWeight(10);  
 		    rect(650,100,250,300);  
 		 } 
-}
