@@ -112,13 +112,13 @@ function tekenboten() {
 	boot10.teken();
 	boot11.teken();
 	boot12.teken();
-		boot13.teken();
-		boot14.teken();
-		boot15.teken();
-		boot16.teken();
-		boot17.teken();
-		boot18.teken();
-	}
+	boot13.teken();
+	boot14.teken();
+	boot15.teken();
+	boot16.teken();
+	boot17.teken();
+	boot18.teken();
+}
 	
 	function beweegboten() {
 		boot1.beweeg(4, 0);
