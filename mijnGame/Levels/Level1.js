@@ -3,9 +3,9 @@ var aantalplaatjes = 4;
 var nummer = 2;
 var frame;
 
-
-
+let Sprite
 let speler1;
+
 
 
 function preload() {
@@ -16,6 +16,7 @@ function preload() {
 		animatie.push(frame);
 	}
 }
+
 
 
 class Sprite {
@@ -30,6 +31,8 @@ class Sprite {
 
 }
 
+
+
 class speler1 {
    constructor(pl) {
 		this.x = x;
@@ -40,12 +43,13 @@ class speler1 {
 		this.kleur = kleur;
 		this.wraparound = wraparound;
     }
-    teken() {
+	teken() {
 	    push();
 	    Image(this.plaatje[2],this.x, this.y);
 	    pop()
     }
   }
+
 
 
   //constructor(x, y, lengte, breedte, kleur, wraparound) {
@@ -57,7 +61,8 @@ class speler1 {
 	//this.wraparound = wraparound;
  // }
   
- 
+
+
   function setup() {
 	
 	speler1 = new Sprite(225, 825, 100, 100, 'white', false);
@@ -66,8 +71,7 @@ class speler1 {
 	song.play();
 }
 
-
-
+ 
 
 	boot1 = new Sprite(200,700,100,100, 'red', true);
 	boot2 = new Sprite(700,700,100,100, 'red', true);
@@ -131,8 +135,6 @@ class speler1 {
 	}
 
 
-
-
 //teken() {
 	//push();
 	//	fill(this.kleur);
@@ -140,8 +142,6 @@ class speler1 {
         //image(,this.x, this.y);
 //	pop();
 	//}
-
-
 
 function draw() {
 	clear();
@@ -151,9 +151,28 @@ function draw() {
   	//fill('green');
 }
 
+function keyPressed () {
+	if (keyCode === RIGHT_ARROW) {
+		speler.beweeg(1, 0);
+		nummer = 4;		
+		beweegboten();
 
-beweeg(x, y) {
-	const stapX = x * 100;
+	} else if (keyCode === LEFT_ARROW) {
+		speler.beweeg(-1, 0);
+    	nummer = 3;
+		beweegboten();
+		
+  	} else if (keyCode === UP_ARROW) {
+		speler.beweeg(0, -1);
+		nummer = 1;
+
+	} else if (keyCode === DOWN_ARROW) {
+    	speler.beweeg(0, 1);
+		nummer = 2;
+  	}
+
+eweeg(x, y) {
+	const stapX = x * 10b0;
 	const stapY = y * 100;
 
 	if(this.wraparound === true) {
@@ -181,31 +200,6 @@ beweeg(x, y) {
 		this.y += stapY;
 	}
 }
-
-
-
-
-
-function keyPressed () {
-	if (keyCode === RIGHT_ARROW) {
-		speler.beweeg(1, 0);
-		nummer = 4;		
-		beweegboten();
-
-	} else if (keyCode === LEFT_ARROW) {
-		speler.beweeg(-1, 0);
-    	nummer = 3;
-		beweegboten();
-		
-  	} else if (keyCode === UP_ARROW) {
-		speler.beweeg(0, -1);
-		nummer = 1;
-
-	} else if (keyCode === DOWN_ARROW) {
-    	speler.beweeg(0, 1);
-		nummer = 2;
-  	}
-
 	//image(animatie[nummer]);
 
 	}
