@@ -131,7 +131,7 @@ function beweegboten() {
 
 function draw() {
 	tekenboten();
-	clear(background);
+	clear();
 }
 
 function keyPressed () {
