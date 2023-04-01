@@ -1,16 +1,13 @@
 var animatie = [];
-var aantalplaatjes = 4;
+const aantalplaatjes = 4;
 var nummer = 2;
 var frame;
-
-
-
-
 
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
-	for (var b = 0;b < aantalplaatjes;b++) {
+
+	for (var b = 0; b < aantalplaatjes; b++) {
 		frame = loadImage("Plaatjes/speler" + b + ".png");
 		animatie.push(frame);
 	}
@@ -21,9 +18,6 @@ function setup() {
 	frameRate(60);
 	song.play();
 }
-
-
-
 
 class player {
    constructor(pl) {
@@ -37,8 +31,6 @@ class player {
    }
   }
 
-
-
   //constructor(x, y, lengte, breedte, kleur, wraparound) {
 	//this.x = x;
 	//this.y = y
@@ -47,11 +39,8 @@ class player {
 	//this.kleur = kleur;
 	//this.wraparound = wraparound;
  // }
-  
- 
 
-
-class Sprite () {
+class Sprite {
     x;
 	y;
 	lengte;
@@ -59,10 +48,40 @@ class Sprite () {
 	plaatje;
 	kleur;
     wraparound;
+
+	beweeg(x, y) {
+		const stapX = x * 100;
+		const stapY = y * 100;
+	
+		if(this.wraparound === true) {
+			if(this.x + stapX <= 1100 && stapX > 0) {
+				this.x += stapX;
+			} else if(stapX > 0) {
+			this.x = this.x + stapX - 1200;
+			} else if(this.x + stapX >= 0) {
+			this.x += stapX;
+		} else {
+				this.x = this.x + stapX + 1200;
+			}
+	
+			if(this.y + stapY <= 800 && stapY > 0) {
+				this.y += stapY;
+		   } else if(stapY > 0) {
+				this.y = this.y + stapY - 900;
+			} else if(this.y + stapY >= 0) {
+				this.y += stapY;
+			} else {
+				this.y = this.y + stapY + 900;
+			}
+		 } else {
+			this.x += stapX;
+			this.y += stapY;
+		}
+	}
 }
  
 
-	boot1 = new Sprite(200,700,100,100, 'red', true);
+boot1 = new Sprite(200,700,100,100, 'red', true);
 	boot2 = new Sprite(700,700,100,100, 'red', true);
 	boot3 = new Sprite(400,600,100,100, 'lightblue', true);
 	boot4 = new Sprite(900,600,100,100, 'lightblue', true);
@@ -101,36 +120,6 @@ class Sprite () {
 		boot17.teken();
 		boot18.teken();
 	}
-
-	beweeg(x, y) {
-		const stapX = x * 100;
-		const stapY = y * 100;
-	
-		if(this.wraparound === true) {
-			if(this.x + stapX <= 1100 && stapX > 0) {
-				this.x += stapX;
-			} else if(stapX > 0) {
-			this.x = this.x + stapX - 1200;
-			} else if(this.x + stapX >= 0) {
-			this.x += stapX;
-		} else {
-				this.x = this.x + stapX + 1200;
-			}
-	
-			if(this.y + stapY <= 800 && stapY > 0) {
-				this.y += stapY;
-		   } else if(stapY > 0) {
-				this.y = this.y + stapY - 900;
-			} else if(this.y + stapY >= 0) {
-				this.y += stapY;
-			} else {
-				this.y = this.y + stapY + 900;
-			}
-		 } else {
-			this.x += stapX;
-			this.y += stapY;
-		}
-	}
 	
 	function beweegboten() {
 		boot1.beweeg(4, 0);
@@ -152,15 +141,6 @@ class Sprite () {
 		boot17.beweeg(3, 0);
 		boot18.beweeg(3, 0);
 	}
-
-
-//teken() {
-	//push();
-	//	fill(this.kleur);
-		//rect(this.x, this.y, this.lengte, this.breedte);
-        //image(,this.x, this.y);
-//	pop();
-	//}
 
 
 function keyPressed () {
