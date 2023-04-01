@@ -1,13 +1,13 @@
-class Sprite {
-    x;
-	y;
-	lengte;
-	breedte;
-	kleur;
-    wraparound;
-    animatie;
+//class Sprite {
+  //  x;
+	//y;
+	//lengte;
+	//breedte;
+//	kleur;
+   // wraparound;
+  //  animatie;
 
-	constructor(x, y, lengte, breedte, kleur, wraparound, animatie) {
+	constructor(x, y, lengte, breedte, kleur, wraparound, pl) {
 		this.x = x;
 		this.y = y
 		this.lengte = lengte;
@@ -17,13 +17,26 @@ class Sprite {
         this.animatie = animatie;
 	}
 
+    //class speler2 {
+       // constructor(pl) {
+        //    this.x = 400;
+         //   this.y = 300;
+         //   this.plaatje = pl;
+      //  }
+       // teken() {
+         //   push();
+         //   Image(this.plaatje[2],this.x, this.y);
+        //    pop()
+       // }
+  //  }
+
 
 	teken() {
-		push();
+	push();
 		fill(this.kleur);
 		//rect(this.x, this.y, this.lengte, this.breedte);
         //image(,this.x, this.y);
-		pop();
+	pop();
 	}
 
 	beweeg(x, y) {
@@ -55,9 +68,9 @@ class Sprite {
             this.y += stapY;
         }
 	}
-}
 
-boot1 = new Sprite(200,700,100,100, 'red', true, animatie);
+
+boot1 = new Sprite(200,700,100,100, 'red', true);
 boot2 = new Sprite(700,700,100,100, 'red', true);
 boot3 = new Sprite(400,600,100,100, 'lightblue', true);
 boot4 = new Sprite(900,600,100,100, 'lightblue', true);

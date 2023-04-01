@@ -1,14 +1,14 @@
-var animatie = [];
-var aantalplaatjes = 4;
-var nummer = 2;
-var frame;
+//var animatie = [];
+//var aantalplaatjes = 4;
+//var nummer = 2;
+//var frame;
 
 
 
-let speler1;
-let speler2;
-let speler3;
-let speler4;
+//let speler1;
+//let speler2;
+//let speler3;
+//let speler4;
 //let dock1;
 //let dock2;
 
@@ -16,15 +16,15 @@ let speler4;
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
-	for (var b = 1;b < aantalplaatjes;b++) {
-		frame = loadImage("Plaatjes/speler" + b + ".png");
-		animatie.push(frame);
+	//for (var b = 1;b < aantalplaatjes;b++) {
+		//frame = loadImage("Plaatjes/speler" + b + ".png");
+		//animatie.push(frame);
 	}
-}
+
 
 function setup() {
 	
-	speler = new Sprite(225, 825, 100, 100, 'white', false, animatie);
+	//speler1 = new Sprite(225, 825, 100, 100, 'white', false, animatie);
 	canvas = createCanvas(1200, 900);
 	frameRate(60);
 	song.play();
@@ -34,8 +34,8 @@ function draw() {
 	clear();
   	background(bg);
   	tekenboten();
-	speler.teken();
-  	fill('green');
+	//speler.teken();
+  	//fill('green');
 }
 
 function keyPressed () {
