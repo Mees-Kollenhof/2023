@@ -44,14 +44,7 @@ class player {
 		this.plaatje = pl;
 		this.kleur = kleur;
 		this.wraparound = wraparound;
-    }
-	teken() {
-		clear(); 
-		push();
-		background(bg);
-	    player = new Sprite(225, 825, 100, 100, plaatje, 'white', false);
-	    pop()
-    }
+   }
   }
 
 
@@ -65,7 +58,35 @@ class player {
 	//this.wraparound = wraparound;
  // }
   
+ beweeg(x, y) {
+	const stapX = x * 100;
+	const stapY = y * 100;
 
+	if(this.wraparound === true) {
+		if(this.x + stapX <= 1100 && stapX > 0) {
+			this.x += stapX;
+		} else if(stapX > 0) {
+	    this.x = this.x + stapX - 1200;
+		} else if(this.x + stapX >= 0) {
+		this.x += stapX;
+	} else {
+			this.x = this.x + stapX + 1200;
+		}
+
+		if(this.y + stapY <= 800 && stapY > 0) {
+			this.y += stapY;
+	   } else if(stapY > 0) {
+			this.y = this.y + stapY - 900;
+		} else if(this.y + stapY >= 0) {
+			this.y += stapY;
+		} else {
+			this.y = this.y + stapY + 900;
+		}
+	 } else {
+		this.x += stapX;
+		this.y += stapY;
+	}
+}
 
   
  
@@ -140,10 +161,6 @@ class player {
 //	pop();
 	//}
 
-function draw() {
-  	tekenboten();
-  	//fill('green');
-}
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
@@ -165,35 +182,17 @@ function keyPressed () {
 		nummer = 2;
   	}
 
-beweeg(x, y) {
-	const stapX = x * 100;
-	const stapY = y * 100;
 
-	if(this.wraparound === true) {
-		if(this.x + stapX <= 1100 && stapX > 0) {
-			this.x += stapX;
-		} else if(stapX > 0) {
-	    this.x = this.x + stapX - 1200;
-		} else if(this.x + stapX >= 0) {
-/		this.x += stapX;
-	} else {
-			this.x = this.x + stapX + 1200;
-		}
-
-		if(this.y + stapY <= 800 && stapY > 0) {
-			this.y += stapY;
-	   } else if(stapY > 0) {
-			this.y = this.y + stapY - 900;
-		} else if(this.y + stapY >= 0) {
-			this.y += stapY;
-		} else {
-			this.y = this.y + stapY + 900;
-		}
-	 } else {
-		this.x += stapX;
-		this.y += stapY;
-	}
-}
 	image(animatie[nummer]);
+
+
+	teken() {
+		clear(); 
+		push();
+		background(bg);
+	    player = new Sprite(225, 825, 100, 100, plaatje, 'white', false);
+		tekenboten();
+	    pop()
+    }
 
 	}
