@@ -45,11 +45,18 @@ class Sprite {
 	y;
 	lengte;
 	breedte
+	kleur;
 	plaatje;
     wraparound;
 
-	constructor(x, y, lengte, kleurbreedte, plaatje) {
-
+	constructor(x, y, lengte, breedte, kleur = color(0, 0, 0), plaatje, wraparound) {
+		this.x = x;
+		this.y = y
+		this.lengte = lengte;
+		this.breedte = breedte;
+		this.kleur = kleur;
+		this.plaatje = plaatje
+		this.wraparound = wraparound;
 	}
 
 	beweeg(x, y) {
@@ -84,7 +91,9 @@ class Sprite {
 
 	teken() {
 		push();
-		image(this.plaatje);
+		fill(this.kleur);
+		rect(this.x, this.y, this.lengte, this.breedte);
+		pop();
 	}
 }
  
