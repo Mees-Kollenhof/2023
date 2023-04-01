@@ -1,6 +1,6 @@
 var animatie = [];
 var aantalplaatjes = 4;
-var nummer = 4;
+var nummer = 2;
 var frame;
 
 
