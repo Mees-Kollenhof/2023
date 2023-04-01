@@ -48,7 +48,7 @@ class Sprite {
 	plaatje;
     wraparound;
 
-	constructor(x, y, lengte, breedte, plaatje) {
+	constructor(x, y, lengte, kleurbreedte, plaatje) {
 
 	}
 
