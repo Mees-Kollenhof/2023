@@ -19,27 +19,6 @@ function setup() {
 	song.play();
 }
 
-class player {
-   constructor(pl) {
-		this.x = x;
-	    this.y = y;
-		this.lengte = lengte;
-		this.breedte = breedte;
-		this.plaatje = pl;
-		this.kleur = kleur;
-		this.wraparound = wraparound;
-   }
-  }
-
-  //constructor(x, y, lengte, breedte, kleur, wraparound) {
-	//this.x = x;
-	//this.y = y
-	//this.lengte = lengte;
-	//this.breedte = breedte;
-	//this.kleur = kleur;
-	//this.wraparound = wraparound;
- // }
-
 class Sprite {
     x;
 	y;
