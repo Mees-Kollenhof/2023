@@ -109,6 +109,10 @@ function tekenboten() {
 	boot17.teken();
 	boot18.teken();
 }
+
+function tekenspeler() {
+	speler.teken();
+}
 	
 function beweegboten() {
 	boot1.beweeg(4, 0);
@@ -135,6 +139,7 @@ function draw() {
 	clear();
 	background(bg);
 	tekenboten();
+	tekenspeler();
 }
 
 function keyPressed () {
