@@ -49,6 +49,10 @@ class Sprite {
 	kleur;
     wraparound;
 
+	constructor() {
+
+	}
+
 	beweeg(x, y) {
 		const stapX = x * 100;
 		const stapY = y * 100;
@@ -77,6 +81,11 @@ class Sprite {
 			this.x += stapX;
 			this.y += stapY;
 		}
+	}
+
+	teken() {
+		push();
+		image(this.plaatje);
 	}
 }
  
@@ -146,16 +155,13 @@ function keyPressed () {
 		speler.beweeg(1, 0);
 		nummer = 4;		
 		beweegboten();
-
 	} else if (keyCode === LEFT_ARROW) {
 		speler.beweeg(-1, 0);
     	nummer = 3;
 		beweegboten();
-		
   	} else if (keyCode === UP_ARROW) {
 		speler.beweeg(0, -1);
 		nummer = 1;
-
 	} else if (keyCode === DOWN_ARROW) {
     	speler.beweeg(0, 1);
 		nummer = 2;
