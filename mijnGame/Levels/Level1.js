@@ -80,10 +80,9 @@ class Sprite {
 	}
 }
  
-
 boot1 = new Sprite(200,700,100,100, 'red', true);
-	boot2 = new Sprite(700,700,100,100, 'red', true);
-	boot3 = new Sprite(400,600,100,100, 'lightblue', true);
+boot2 = new Sprite(700,700,100,100, 'red', true);
+boot3 = new Sprite(400,600,100,100, 'lightblue', true);
 	boot4 = new Sprite(900,600,100,100, 'lightblue', true);
 	boot5 = new Sprite(300,500,100,100, 'yellow', true);
 	boot6 = new Sprite(700,500,100,100, 'yellow', true);
