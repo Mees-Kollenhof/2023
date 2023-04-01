@@ -106,12 +106,12 @@ function tekenboten() {
 	boot4.teken();
 	boot5.teken();
 	boot6.teken();
-		boot7.teken();
-		boot8.teken();
-		boot9.teken();
-		boot10.teken();
-		boot11.teken();
-		boot12.teken();
+	boot7.teken();
+	boot8.teken();
+	boot9.teken();
+	boot10.teken();
+	boot11.teken();
+	boot12.teken();
 		boot13.teken();
 		boot14.teken();
 		boot15.teken();
