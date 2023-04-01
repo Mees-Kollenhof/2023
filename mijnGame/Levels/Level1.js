@@ -4,6 +4,9 @@ let bg;
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
 	bg = loadImage('Backgrounds/water.png');
+	for (var b = 0;b < aantalplaatjes;b++) {
+		frame = loadImage("Plaatjes/speler" + b + ".png");
+}
 }
 
 
