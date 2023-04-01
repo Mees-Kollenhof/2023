@@ -83,21 +83,21 @@ class Sprite {
 boot1 = new Sprite(200,700,100,100, 'red', true);
 boot2 = new Sprite(700,700,100,100, 'red', true);
 boot3 = new Sprite(400,600,100,100, 'lightblue', true);
-	boot4 = new Sprite(900,600,100,100, 'lightblue', true);
-	boot5 = new Sprite(300,500,100,100, 'yellow', true);
-	boot6 = new Sprite(700,500,100,100, 'yellow', true);
-	boot7 = new Sprite(1000,500,100,100, 'yellow', true);
-	boot8 = new Sprite(100,400,100,100, 'red', true);
-	boot9 = new Sprite(700,400,100,100, 'red', true);
-	boot10 = new Sprite(1000,400,100,100, 'red', true);
-	boot11 = new Sprite(0,300,100,100, 'purple', true);
-	boot12 = new Sprite(400,300,100,100, 'purple', true);
-	boot13 = new Sprite(800,300,100,100, 'purple', true);
-	boot14 = new Sprite(200,200,100,100, 'red', true);
-	boot15 = new Sprite(400,200,100,100, 'red', true);
-	boot16 = new Sprite(900,200,100,100, 'red', true);
-	boot17 = new Sprite(500,100,100,100, 'lightblue', true);
-	boot18 = new Sprite(900,100,100,100, 'lightblue', true);
+boot4 = new Sprite(900,600,100,100, 'lightblue', true);
+boot5 = new Sprite(300,500,100,100, 'yellow', true);
+boot6 = new Sprite(700,500,100,100, 'yellow', true);
+boot7 = new Sprite(1000,500,100,100, 'yellow', true);
+boot8 = new Sprite(100,400,100,100, 'red', true);
+boot9 = new Sprite(700,400,100,100, 'red', true);
+boot10 = new Sprite(1000,400,100,100, 'red', true);
+boot11 = new Sprite(0,300,100,100, 'purple', true);
+boot12 = new Sprite(400,300,100,100, 'purple', true);
+boot13 = new Sprite(800,300,100,100, 'purple', true);
+boot14 = new Sprite(200,200,100,100, 'red', true);
+boot15 = new Sprite(400,200,100,100, 'red', true);
+boot16 = new Sprite(900,200,100,100, 'red', true);
+boot17 = new Sprite(500,100,100,100, 'lightblue', true);
+boot18 = new Sprite(900,100,100,100, 'lightblue', true);
 	
 	function tekenboten() {
 		boot1.teken();
