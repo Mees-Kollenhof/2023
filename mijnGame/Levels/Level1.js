@@ -1,6 +1,6 @@
 function preload() {
 	song = loadSound('PuzzelMuziek.mp3');
-	bg = loadImage('Backgrounds/water.png');
+	background = loadImage('Backgrounds/water.png');
 }
 
 function setup() {
@@ -131,8 +131,7 @@ function beweegboten() {
 
 function draw() {
 	tekenboten();
-	background();
-	clear();
+	clear(background);
 }
 
 function keyPressed () {
