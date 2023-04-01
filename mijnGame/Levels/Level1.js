@@ -120,27 +120,26 @@ function tekenboten() {
 	boot18.teken();
 }
 	
-	function beweegboten() {
-		boot1.beweeg(4, 0);
-		boot2.beweeg(4, 0);
-		boot3.beweeg(-3, 0);
-		boot4.beweeg(-3, 0);
-		boot5.beweeg(-2, 0);
-		boot6.beweeg(-2, 0);
-		boot7.beweeg(-2, 0);
-		boot8.beweeg(4, 0);
-		boot9.beweeg(4, 0);
-		boot10.beweeg(4, 0);
-		boot11.beweeg(1, 0);
-		boot12.beweeg(1, 0);
-		boot13.beweeg(1, 0);
-		boot14.beweeg(-4, 0);
-		boot15.beweeg(-4, 0);
-		boot16.beweeg(-4, 0);
-		boot17.beweeg(3, 0);
-		boot18.beweeg(3, 0);
-	}
-
+function beweegboten() {
+	boot1.beweeg(4, 0);
+	boot2.beweeg(4, 0);
+	boot3.beweeg(-3, 0);
+	boot4.beweeg(-3, 0);
+	boot5.beweeg(-2, 0);
+	boot6.beweeg(-2, 0);
+	boot7.beweeg(-2, 0);
+	boot8.beweeg(4, 0);
+	boot9.beweeg(4, 0);
+	boot10.beweeg(4, 0);
+	boot11.beweeg(1, 0);
+	boot12.beweeg(1, 0);
+	boot13.beweeg(1, 0);
+	boot14.beweeg(-4, 0);
+	boot15.beweeg(-4, 0);
+	boot16.beweeg(-4, 0);
+	boot17.beweeg(3, 0);
+	boot18.beweeg(3, 0);
+}
 
 function keyPressed () {
 	if (keyCode === RIGHT_ARROW) {
